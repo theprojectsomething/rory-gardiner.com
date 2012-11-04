@@ -21,7 +21,7 @@
 <link rel="image_src" type="image/jpeg" href="<?php echo $base_uri . $data['site']['icon']; ?>" />
 <?php endif; ?>
 <?php if($data['site']['favicon']): ?>
-<link rel="icon" type="image/<?php echo substr(strrchr($data['site']['favicon'], '.'), 1); ?>" href="<?php echo $base_uri . $data['site']['favicon']; ?>" />
+<link rel="shortcut icon" href="<?php echo $data['site']['favicon']; ?>" type="image/<?php echo (strpos($data['site']['favicon'], '.ico') > 0 ? 'x-icon' : substr(strrchr($data['site']['favicon'], '.'), 1)); ?>" />
 <?php endif; ?>
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
