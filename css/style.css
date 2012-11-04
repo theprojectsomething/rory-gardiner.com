@@ -1,0 +1,458 @@
+/*
+	CSS Reset by Eric Meyer - Released under Public Domain
+    http://meyerweb.com/eric/tools/css/reset/
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td
+                  {margin: 0;padding: 0;border: 0;outline: 0;
+                  font-size: 100%;vertical-align: baseline;
+                  background: transparent;}
+body              {line-height: 1;}
+ol, ul            {list-style: none;}
+blockquote, q     {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';	content: none;}
+:focus            {outline: 0;}
+ins               {text-decoration: none;}
+del               {text-decoration: line-through;}
+table             {border-collapse: collapse;border-spacing: 0;}
+
+/* FONTS */
+
+.monolight{
+	font-family: 'DecimaMonoLight';
+}
+
+.light{
+	font-family: 'DecimaLight';
+}
+
+.bold{
+	font-family: 'DecimaBold';
+}
+
+/* IE FIXES */
+.ie{
+
+}
+
+::selection{
+	color: #f1f2f3;
+	background: #333; /* Safari */
+}
+::-moz-selection{
+	color: #f1f2f3;
+	background: #333; /* Firefox */
+}
+
+/* SITE */
+a{
+	color: #666;
+	text-decoration: underline;
+	font-weight: 400;
+}
+
+a:hover{
+	color: #333;
+	text-decoration: none;
+}
+
+body{
+	font-family: 'DecimaMonoLight', Helvetica, Verdana, Sans-Serif;
+	font-size: 62.5%;
+	min-width: 300px;
+	background: #f1f2f3;
+	color: #333;
+	cursor: default;
+	-webkit-font-smoothing: antialiased;
+}
+
+body.init{
+	display: none;
+}
+
+#nav{
+	float: left;
+    padding: 36px 0 0 10px;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: auto;
+}
+
+#nav h1{
+	position: absolute;
+	bottom: 0;
+}
+
+#nav h1 a{
+	display: block;
+	background: url('../assets/title.png');
+	width: 72px;
+	height: 32px;
+}
+
+#nav h1 span{
+	display: block;
+	width: 0;
+	overflow: hidden;
+}
+
+#nav .main{
+	font-size: 1em;
+	font-family: 'DecimaBold', Helvetica, Verdana, Sans-Serif;
+	line-height: 2.4em;
+	margin-top: -0.63em;
+}
+#nav .main a{
+	font-size: 1.1em;
+	line-height: 0.8em;
+	display: inline-block;
+	text-decoration: none;
+	color: #666;
+}
+#nav .main .active a{
+	background: url('../assets/dot.png') repeat-x 0 0.3em;
+}
+
+#old{
+	position: fixed;
+	top: 40px;
+	left: 40px;
+	background: #F1F2F3;
+	line-height: 1.1em;
+	width: 220px;
+	padding: 5px 8px 27px;
+}
+
+#static{
+	display: none;
+	position: absolute;
+	top: 0;
+	background: #F1F2F3;
+	line-height: 1.1em;
+}
+#static.contact{
+	display: block;
+	width: 173px;
+	margin-left: -198px;
+}
+#static.information{
+	display: block;
+	width: 468px;
+	margin-left: -493px;
+	min-height: 200px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#static .overlays{
+	margin: 5px 8px 0;
+}
+
+#static article{
+	display: none;
+}
+
+#static article.active{
+	display: block;
+	padding-bottom: 27px;
+}
+
+#static h3, #old h3{
+	font-weight: 400;
+	padding-bottom: 13px;
+}
+
+#static a{
+	text-decoration: none;
+}
+
+#static a:hover{
+	text-decoration: underline;
+	color: #666;
+}
+
+#static div div{
+	width: 4px !important;
+	border-radius: 0 !important;
+	background: #666 !important;
+	background: rgba(102, 102, 102, 0.5) !important;
+}
+
+#static .close{
+	position: absolute;
+    right: 15px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: url('../assets/x.png') no-repeat;
+}
+
+#info{
+	position: relative;
+}
+
+#info .pages{
+	padding-top: 6px;
+}
+
+#info .pages li{
+	display: none;
+	line-height: 1.2em;
+}
+#info .pages a{
+	color: #a2a3a5;
+	text-decoration: none;
+	display: table;
+}
+#info .pages a:hover, #projects.images #info .pages li.active a, #info .pages li.active a{
+	color: #666;
+}
+#info .pages a span{
+	display: table-cell;
+	width: 100px;
+}
+#work #info .pages{
+	position: absolute;
+	bottom: 0;
+	font-size: 1.1em;
+	display: none;
+}
+#work #info .pages li.active{
+	display: block;
+}
+#projects #info .pages li{
+	padding-top: 12px;
+	display: block;
+	letter-spacing: -1px;
+}
+
+#nav .picker{
+	width: 100px;
+	position: absolute;
+	bottom: 60px;
+	display: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#projects .list #nav .picker{
+	display: none !important;
+}
+#projects .images #nav .picker{
+	display: block;
+}
+#nav .picker ul{
+	height: 105px;
+}
+
+#nav .picker li{
+	-webkit-transition: background 200ms;
+	-moz-transition: background 200ms;
+	-o-transition: background 200ms;
+	-ms-transition: background 200ms;
+	transition: background 200ms;
+	font-size: 1.1em;
+	float: left;
+	width: 13px;
+	height: 12px;
+	padding: 2px 1px 0 0;
+	margin: 0 5px 3px 0;
+	color: #CCC;
+	color: rgba(102, 102, 102, 0.5);
+}
+
+#nav .picker li.active{
+	cursor: pointer;
+	color: #666;
+}
+
+#nav .picker li.active.current, #nav .picker li.closed{
+	cursor: default;
+	background: #000;
+	color: #000;
+}
+
+#nav .picker aside{
+	clear: both;
+	margin-left: -3px;
+}
+#nav .picker aside span{
+	padding: 0 3px;
+	cursor: pointer;
+}
+
+.content{
+	float: left;
+    margin: 36px 176px 36px 36px;
+    padding-right: 170px;
+}
+
+.content.init .hidden{
+	display: block;
+}
+.content .hidden{
+	display: none;
+}
+
+.list .hero{
+	margin-right: 2.8%;
+	float: left;
+	overflow: hidden;
+	padding-bottom: 13px;
+}
+
+.list .hero span.title{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.list .hero img{
+	max-width: 125%;
+	position: static;
+}
+
+#home .hero{
+	margin-bottom: 0;
+}
+
+#journal .hero{
+	margin-bottom: 36px !important;
+}
+
+.hero{
+	margin-bottom: 36px;
+	position: relative;
+}
+
+.hero img{
+	max-height: 100%;
+	max-width: 100%;
+	position: absolute;
+	display: none;
+}
+
+.hero img.auto{
+	display: block;
+}
+
+.hero .loader{
+	position: absolute;
+	width: 10%;
+}
+.hero .loader span{
+	display: block;
+	background: #e0e1e2;
+	height: 2px;
+	width: 0;
+}
+
+.hero .error{
+	display: block;
+    padding: 5px;
+}
+@media screen and (max-height: 300px){
+	#nav h1{
+		position: relative;
+		padding-bottom: 15px;
+	}
+}
+@media screen and (max-height: 460px){
+	#work{
+		overflow-y: scroll;
+	}	
+	#nav .picker{
+		display: none !important;
+	}
+}
+@media screen and (min-width: 600px){
+
+}
+#work{
+	overflow-y: hidden;
+}
+#work.mobile{
+	overflow-y: scroll;
+}
+
+#work.mobile .content{
+	float: none;
+	margin: 30px 36px 130px 30px;
+}
+#work.mobile .hero:not(:first-child){
+	display: none;
+}
+#work.mobile #nav{
+	padding: 8px 0 0 30px;
+	float: none;
+	position: relative;
+}
+#work.mobile #nav .main{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	line-height: 1em;
+}
+
+#work.mobile #nav .main a{
+	font-family: 'DecimaMonoLight', Helvetica, Verdana, Sans-Serif;
+	font-weight: 400;
+	font-size: 2.1818em;
+	line-height: 1em;
+}
+#work.mobile #nav .main li.active a{
+	background: none;
+}
+#nav .main li.contact, #work.mobile .static #nav .main li.contact, #work.mobile #nav .main li:not(.contact):not(.work), #work.mobile #nav .main li.active, #work.mobile #static .close{
+	display: none;
+}
+#work.mobile #nav .main li.contact{
+	display: block;
+}
+#work.mobile #info{
+	right: 0;
+	font-size: 2.1818em;
+	position: absolute;
+	color: #666;
+}
+#work.mobile #info .pages{
+	position: static;
+	font-size: 1em;
+	padding: 0;
+	display: block;
+}
+#work.mobile .picker{
+	display: none !important;
+}
+#work.mobile #nav h1 a{
+	background: url('../assets/titlex.png');
+	width: 87px;
+	height: 39px;
+}
+#work.mobile #static{
+	color: #666;
+	font-size: 2.1818em;
+}
+#work.mobile #static.contact{
+	margin-left: 0;
+	width: auto;
+}
+#work.mobile .static .hero{
+	display: none !important;
+}
+#work.mobile .static #info{
+	display: none;
+}

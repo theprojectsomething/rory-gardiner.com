@@ -1,0 +1,17 @@
+RewriteEngine On
+
+RewriteRule ^(admin)($|/) - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{QUERY_STRING} !page
+RewriteRule ^(.+)$ index.php?page=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} .php
+RewriteCond %{REQUEST_FILENAME} !index.php
+RewriteCond %{QUERY_STRING} !ajax=true
+RewriteRule ^(.+)$ index.php?page=missing [L]
+
+ErrorDocument 404 index.php?page=missing
+
+Options All -Indexes

@@ -1,0 +1,1 @@
+<article id="old"><h3>Your browser needs an update.</h3>For an infinitely better experience try <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> or <a href="https://www.google.com/chrome">Chrome</a>.<br /><br /><a href="" class="continue">Hide</a></article>
