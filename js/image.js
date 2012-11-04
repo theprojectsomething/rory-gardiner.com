@@ -68,7 +68,7 @@
 			var mr;// = mw/dimensions.max[page].width;
 			$('.hero').css({width: mw}).each(function(i){
 				id = data.pages[page].content[i].id;//$(this).children('img').data('id');
-				mr = mw/data.images[id].width;//mw/dimensions.max[page].width;
+				mr = Math.min(1, mw/data.images[id].width);//mw/dimensions.max[page].width;
 				data.pages[page].content[i].height = data.images[id].height*mr;
 				data.pages[page].content[i].y = nh;
 				$(this).css({'height': data.pages[page].content[i].height});
